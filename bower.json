@@ -1,0 +1,24 @@
+{
+  "name": "dojo",
+  "authors": [
+    "Gavin King <gavin.king@itslearning.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dojo": "dojo/dojo#~1.10.4",
+    "dijit": "dojo/dijit#~1.10.4",
+    "dojox": "dojo/dojox#~1.10.4",
+    "util": "dojo/util#~1.10.4"
+  }
+}
