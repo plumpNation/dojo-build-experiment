@@ -1,0 +1,13 @@
+{
+    "name": "test-app",
+    "description": "practicing builds",
+    "version": "1.0",
+    "keywords": ["JavaScript", "Dojo", "Toolkit", "DojoX"],
+    "dependencies": {
+        "dojo": "~1.10.4",
+        "dijit": "~1.10.4",
+        "dojox": "~1.10.4"
+    },
+    "main": "./",
+    "dojoBuild": "app.profile.js"
+}
