@@ -6,6 +6,7 @@ var profile = {
     'optimize'      : '',
     'layerOptimize' : '',
     'selectorEngine': 'lite',
+    'mini'          : true,
 
     packages: [
         {
@@ -37,7 +38,11 @@ var profile = {
             'include': [
                 'lib/dialog-test'
             ],
-            amd: true
+            'exclude': [
+                // 'dojo',
+                // 'dojox',
+                // 'dijit'
+            ]
         }
     }
 };
