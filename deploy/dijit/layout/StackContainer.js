@@ -4,7 +4,7 @@ define("dijit/layout/StackContainer", [
 	"dojo/_base/declare", // declare
 	"dojo/dom-class", // domClass.add domClass.replace
 	"dojo/dom-construct",
-	"dojo/has", // has("dijit-legacy-requires")
+	"dojo/has", //  0 
 	"dojo/_base/lang", // lang.extend
 	"dojo/on",
 	"dojo/ready",
@@ -19,7 +19,7 @@ define("dijit/layout/StackContainer", [
 	//		dijit/layout/StackContainer
 
 	// Back compat w/1.6, remove for 2.0
-	if(has("dijit-legacy-requires")){
+	if( 0 ){
 		ready(0, function(){
 			var requires = ["dijit/layout/StackController"];
 			require(requires);	// use indirection so modules not rolled into a build

@@ -1,16 +1,3 @@
-/*
-	Copyright (c) 2004-2011, The Dojo Foundation All Rights Reserved.
-	Available via Academic Free License >= 2.1 OR the modified BSD license.
-	see: http://dojotoolkit.org/license for details
-*/
-
-/*
-	This is an optimized version of Dojo, built for deployment and not for
-	development. To get sources and documentation, please visit:
-
-		http://dojotoolkit.org
-*/
-
 (function(
 	userConfig,
 	defaultConfig
@@ -1988,10 +1975,6 @@
 					 name:"dijit"
 				},
 				{
-					 location:"../dojox",
-					 name:"dojox"
-				},
-				{
 					 location:"../lib",
 					 main:"",
 					 name:"lib"
@@ -2013,7 +1996,7 @@ define([
 	"./_base/Deferred",
 	"./_base/json",
 	"./_base/Color",
-	"./has!dojo-firebug?./_firebug/firebug",
+	"require",
 	"./_base/browser",
 	"./_base/loader"
 ], function(kernel, has, require, sniff, lang, array, config, ready){
@@ -2022,7 +2005,7 @@ define([
 	// summary:
 	//		This is the package main module for the dojo package; it loads dojo base appropriate for the execution environment.
 
-	// the preferred way to load the dojo firebug console is by setting has("dojo-firebug") true in dojoConfig
+	// the preferred way to load the dojo firebug console is by setting  0  true in dojoConfig
 	// the isDebug config switch is for backcompat and will work fine in sync loading mode; it works in
 	// async mode too, but there's no guarantee when the module is loaded; therefore, if you need a firebug
 	// console guaranteed at a particular spot in an app, either set config.has["dojo-firebug"] true before

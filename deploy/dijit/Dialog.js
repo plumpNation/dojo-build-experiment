@@ -16,7 +16,7 @@ define("dijit/Dialog", [
 	"dojo/_base/lang", // lang.mixin lang.hitch
 	"dojo/on",
 	"dojo/ready",
-	"dojo/sniff", // has("ie") has("opera") has("dijit-legacy-requires")
+	"dojo/sniff", // has("ie") has("opera")  0 
 	"dojo/window", // winUtils.getBox, winUtils.get
 	"dojo/dnd/Moveable", // Moveable
 	"dojo/dnd/TimedMoveable", // TimedMoveable
@@ -687,7 +687,7 @@ define("dijit/Dialog", [
 	});
 
 	// Back compat w/1.6, remove for 2.0
-	if(has("dijit-legacy-requires")){
+	if( 0 ){
 		ready(0, function(){
 			var requires = ["dijit/TooltipDialog"];
 			require(requires);	// use indirection so modules not rolled into a build

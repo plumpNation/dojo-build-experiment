@@ -1,8 +1,8 @@
 var profile = (function () {
     var copyOnly = function (filename, mid){
         var list = {
-            'dojo/dojo.profile': 1,
-            'dojo/package.json': 1
+            'lib/lib.profile' : true,
+            'lib/package.json': true
         };
 
         return (mid in list);

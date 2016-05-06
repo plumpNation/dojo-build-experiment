@@ -21,7 +21,7 @@ define("dijit/Menu", [
 	//		dijit/Menu
 
 	// Back compat w/1.6, remove for 2.0
-	if(has("dijit-legacy-requires")){
+	if( 0 ){
 		ready(0, function(){
 			var requires = ["dijit/MenuItem", "dijit/PopupMenuItem", "dijit/CheckedMenuItem", "dijit/MenuSeparator"];
 			require(requires);	// use indirection so modules not rolled into a build

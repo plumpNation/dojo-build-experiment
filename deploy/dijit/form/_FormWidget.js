@@ -1,6 +1,6 @@
 define("dijit/form/_FormWidget", [
 	"dojo/_base/declare", // declare
-	"dojo/sniff", // has("dijit-legacy-requires"), has("msapp")
+	"dojo/sniff", //  0 , has("msapp")
 	"dojo/_base/kernel", // kernel.deprecated
 	"dojo/ready",
 	"../_Widget",
@@ -13,7 +13,7 @@ define("dijit/form/_FormWidget", [
 	//		dijit/form/_FormWidget
 
 	// Back compat w/1.6, remove for 2.0
-	if(has("dijit-legacy-requires")){
+	if( 0 ){
 		ready(0, function(){
 			var requires = ["dijit/form/_FormValueWidget"];
 			require(requires);	// use indirection so modules not rolled into a build

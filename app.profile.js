@@ -8,6 +8,11 @@ var profile = {
     'selectorEngine': 'lite',
     'mini'          : true,
 
+    staticHasFeatures: {
+        'dojo-firebug': 0,
+        'dijit-legacy-requires': 0
+    },
+
     packages: [
         {
             'name': 'dojo',
@@ -18,10 +23,6 @@ var profile = {
             'location': 'bower_components/dijit'
         },
         {
-            name: 'dojox',
-            location: 'bower_components/dojox'
-        },
-        {
             name: 'lib',
             location: 'lib'
         }
@@ -30,18 +31,30 @@ var profile = {
     resourceTags: {
         amd: function(filename, mid) {
             return /\.js$/.test(filename);
+        },
+
+        copyOnly: function (filename, mid){
+            var list = {
+                'app.profile': true,
+                'package.json': true
+            };
+
+            return (mid in list);
         }
     },
 
     'layers': {
-        'deploy/boom': {
-            'include': [
-                'lib/dialog-test'
+        'dojo/dojo': {
+            boot: true
+        },
+
+        'lib/dialog-dependencies': {
+            'includes': [
+                'dojo/parser',
+                'dojo/ready'
             ],
-            'exclude': [
-                // 'dojo',
-                // 'dojox',
-                // 'dijit'
+            'layerDependencies': [
+                'dojo/dojo'
             ]
         }
     }
