@@ -4,39 +4,21 @@
         <meta charset="utf-8">
         <title>Dialog test</title>
 
-        <link rel="stylesheet" href="bower_components/dijit/themes/dijit.css">
-        <link rel="stylesheet" href="bower_components/dijit/themes/claro/claro.css">
+        <link rel="stylesheet" href="vendors/dijit/themes/dijit.css">
+        <link rel="stylesheet" href="vendors/dijit/themes/claro/claro.css">
 
         <script src="dojo.config.js.php"></script>
 
-        <script src="bower_components/dojo/dojo.js"></script>
+        <script src="vendors/dojo/dojo.js"></script>
 
         <!-- <script src="deploy/dojo/dojo.js"></script> -->
         <script src="app.js"></script>
     </head>
 
     <body class="claro">
-        <div data-dojo-type="dijit/Dialog" data-dojo-id="myDialog" title="Name and Address">
-            <table class="dijitDialogPaneContentArea">
-                <tr>
-                    <td><label for="name">Name:</label></td>
-                    <td><input data-dojo-type="dijit/form/TextBox" name="name" id="name"></td>
-                </tr>
-                <tr>
-                    <td><label for="address">Address:</label></td>
-                    <td><input data-dojo-type="dijit/form/TextBox" name="address" id="address"></td>
-                </tr>
-            </table>
-
-            <div class="dijitDialogPaneActionBar">
-                <button data-dojo-type="dijit/form/Button" type="submit" id="ok">OK</button>
-                <button data-dojo-type="dijit/form/Button" type="button" data-dojo-props="onClick:function(){myDialog.hide();}"
-                        id="cancel">Cancel</button>
-            </div>
-        </div>
-
-        <button data-dojo-type="dijit/form/Button" type="button" onClick="myDialog.show();">
-            Show me!
-        </button>
+        <label for="date1">Drop down Date box:</label>
+        <input type="text" name="date1" id="date1" value="2005-12-30"
+            data-dojo-type="dijit/form/DateTextBox"
+            required="true" />
     </body>
 </html>

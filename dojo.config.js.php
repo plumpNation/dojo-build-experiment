@@ -6,15 +6,15 @@ var dojoConfig = {
     packages: [
         {
             'name': 'dojo',
-            'location': 'deploy/dojo'
+            'location': 'vendors/dojo'
         },
         {
             'name': 'dijit',
-            'location': 'deploy/dijit'
+            'location': 'vendors/dijit'
         },
         {
             'name': 'lib',
-            'location': 'deploy/lib'
+            'location': 'lib'
         }
     ],
 
